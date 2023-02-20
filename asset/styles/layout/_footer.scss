@@ -14,7 +14,7 @@ footer {
     }
 
     .footer-left {
-      padding: 50px 60px 0px;
+      padding: 50px 50px 0px;
       border-right: 1px solid $grey2;
 
       // @media screen and (max-width: 1270px) {
@@ -26,8 +26,9 @@ footer {
       // }
 
       @media screen and (max-width: 890px) {
-        padding: 50px 60px 50px;
+        padding: 50px 50px 50px;
         border-bottom: 1px solid $grey2;
+        width: 100%;
       }
 
       .grid-container-left {
@@ -68,6 +69,16 @@ footer {
 
           input {
             height: 85%;
+
+            @media screen and (max-width: 800px) {
+              width: 100%;
+            }
+          }
+
+          textarea {
+            @media screen and (max-width: 800px) {
+              width: 100%;
+            }
           }
         }
       }
@@ -77,9 +88,16 @@ footer {
         text-align: left;
       }
 
+      .btn {
+        margin: 0 auto;
+      }
       .button {
         color: $grey3;
         border: 2px solid $grey3;
+        @media screen and (max-width: 800px) {
+          font-size: 0.7em;
+          padding: 15px 20px;
+        }
       }
     }
 
@@ -100,9 +118,9 @@ footer {
           border-bottom: 1px solid $grey2;
           align-items: center;
           text-align: left;
-          // @media screen and (max-width: 1270px) {
-          //   padding: 50px 25px;
-          // }
+          @media screen and (max-width: 800px) {
+            padding: 50px 25px;
+          }
 
           &:first-child p {
             @media screen and (max-width: 1000px) {
