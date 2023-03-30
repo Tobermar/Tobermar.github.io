@@ -1,0 +1,197 @@
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url(./bg-slider-06.jpg) center/cover;
+
+
+    &:before {
+        content: "";
+        background: black;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        animation: 2.5s animBefore ease-in-out forwards;
+        animation-delay: 0.15s;
+        z-index: 1;
+
+        @keyframes animBefore {
+            to {
+                opacity: 0;
+                z-index: -1;
+            }
+        }
+    }
+
+    nav {
+        width: 75%;
+        margin: 0 auto;
+        padding: 20px 0;
+        height: 100px;
+    }
+
+    .nav-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+
+
+        h2 {
+            font-size: 3em;
+            color: $white1;
+
+            @media screen and (max-width:900px) {
+                font-size: 2.5em;
+            }
+
+            &:hover {
+                color: $grey3;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            @media screen and (max-width:900px) {
+                font-size: 0.9em;
+            }
+
+        }
+
+        a {
+            transition: 0.2s;
+        }
+
+        a:hover {
+            color: $grey3;
+        }
+
+        .ul-nav {
+            width: 80%;
+            text-transform: uppercase;
+            font-family: $font3;
+            font-size: 0.9em;
+            position: relative;
+
+            // a:hover::after {
+            //     content: "";
+            //     position: absolute;
+            //     background: $grey3;
+            //     width: 50px;
+            //     height: 1px;
+            //     transform: translateX(-50%);
+            //     // left: 50%;
+            //     bottom: -10px;
+            // }
+
+            // a:hover {
+            //     text-decoration: underline;
+            //     text-underline-offset: 5px;
+            //     transition: 0.2s;
+            // }
+
+            @media screen and (max-width:900px) {
+                a {
+                    font-size: 0.9em;
+                }
+            }
+
+            @media screen and (max-width:700px) {
+                display: none;
+            }
+
+
+        }
+
+        .ul-social {
+            width: 10%;
+
+            @media screen and (max-width:700px) {
+                width: 50%;
+            }
+        }
+    }
+
+    .text-container {
+        margin-top: 220px;
+
+        h2 {
+            font-size: 4em;
+            font-weight: 500;
+            line-height: 5px;
+
+            @media screen and (max-width:700px) {
+                font-size: 3em;
+            }
+        }
+
+        h1 {
+            font-size: 4em;
+            color: $white1;
+            letter-spacing: 15px;
+
+            @media screen and (max-width:700px) {
+                font-size: 3em;
+                margin-top: 35px;
+            }
+
+            @media screen and (max-width:500px) {
+                font-size: 2.5em;
+            }
+
+            @media screen and (max-width:400px) {
+                font-size: 2.3em;
+            }
+        }
+
+        img {
+            margin: 40px 0;
+            height: 35px;
+        }
+
+        p {
+            color: $white1;
+            text-transform: uppercase;
+            font-family: $font3;
+            letter-spacing: 8px;
+
+            @media screen and (max-width:750px) {
+                padding: 0 150px;
+            }
+
+            @media screen and (max-width:700px) {
+                padding: 0 120px;
+            }
+
+            @media screen and (max-width:650px) {
+                padding: 0 100px;
+            }
+
+            @media screen and (max-width:580px) {
+                padding: 0 80px;
+            }
+
+            @media screen and (max-width:540px) {
+                padding: 0 50px;
+            }
+
+            @media screen and (max-width:480px) {
+                padding: 0 30px;
+            }
+
+            @media screen and (max-width:440px) {
+                padding: 0 0px;
+            }
+
+            @media screen and (max-width:400px) {
+                font-size: 0.8em;
+            }
+        }
+    }
+}

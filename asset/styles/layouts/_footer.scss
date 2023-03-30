@@ -1,0 +1,153 @@
+footer {
+    .footer-container {
+        background: url(/asset/img/bg-footer.jpg) center;
+        display: grid;
+        grid-template-columns: 35% 35%;
+        justify-content: center;
+
+        @media screen and (max-width: 900px) {
+            background: $black2;
+        }
+
+
+        &>div:first-child {
+            margin: 80px;
+            text-align: left;
+
+            @media screen and (max-width: 900px) {
+                display: none;
+            }
+
+            @media screen and (max-width: 1440px) {
+                margin: 80px 80px 80px 60px;
+            }
+
+            @media screen and (max-width: 1380px) {
+                margin: 80px 80px 80px 30px;
+            }
+
+            @media screen and (max-width: 1300px) {
+                margin: 80px 80px 80px 0px;
+            }
+
+            @media screen and (max-width: 1210px) {
+                margin: 80px 80px 80px -30px;
+            }
+
+            h2 {
+                font-size: 3em;
+                font-weight: 400;
+            }
+
+            p {
+                color: $grey2;
+                font-family: $font3;
+                font-weight: 400;
+                line-height: 2;
+                font-size: 1.2em;
+
+                @media screen and (max-width: 1210px) {
+                    font-size: 1em;
+                }
+            }
+        }
+
+        &>div:last-child {
+
+            margin: 86px 0 80px 80px;
+            text-align: left;
+
+            @media screen and (max-width: 900px) {
+                width: 100%;
+                margin: 86px 0 80px 0px;
+            }
+
+            h6 {
+                color: $white1;
+                font-size: 1.2em;
+                font-family: $font3;
+            }
+
+            form {
+                margin: 15px 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+
+                input {
+                    background: transparent;
+                    border: $copper2 1px solid;
+                    color: $grey1;
+                    font-size: 1em;
+                    font-weight: 400;
+                    height: 45px;
+                    width: 315px;
+                    padding-left: 10px;
+
+                    @media screen and (max-width: 500px) {
+                        width: 290px;
+                    }
+                }
+
+                button {
+                    // margin-left: 30px;
+                    width: 74px;
+                    height: 35px;
+                    background: $grey4;
+                    color: $grey3;
+                    border: 1px solid $copper2;
+                    cursor: pointer;
+                    letter-spacing: 1px;
+                    // padding: 10px 15px;
+                    text-transform: uppercase;
+                    border-radius: 5px;
+                    // border-radius: 10px;
+                    transition: 0.15s;
+
+                    &:hover {
+                        background: rgba(73, 73, 73, 0.767);
+                        transform: scale(1.05);
+                    }
+                }
+            }
+
+            .social-media {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 112px 1fr;
+                gap: 40px;
+                // width: 60%;
+                padding-top: 10px;
+
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    width: 200px;
+
+                    @media screen and (max-width:1000px) {
+                        width: 180px;
+                    }
+
+                    @media screen and (max-width: 500px) {
+                        width: 150px;
+                    }
+
+
+                    i {
+                        color: $grey3;
+                        transition: 0.15s ease-in-out;
+
+                        &:hover {
+                            color: $grey2;
+                            transform: scale(1.05);
+                        }
+                    }
+
+                }
+            }
+
+        }
+    }
+}

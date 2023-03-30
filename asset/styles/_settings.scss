@@ -1,27 +1,31 @@
 @font-face {
-  font-family: "Inter";
-  src: url(../font/Inter-VariableFont_slnt\wght.ttf);
+  font-family: "Allura";
+  src: url(../font/Allura-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Merri";
-  src: url(../font/Merriweather-Light.ttf);
+  font-family: "Poppins";
+  src: url(../font/Poppins-Medium.ttf);
 }
 
-$font1: Inter, sans-serif;
-$font2: Merri, sans-serif;
+@font-face {
+  font-family: "Roboto";
+  src: url(../font//Roboto-Light.ttf);
+}
 
-$black1: rgb(17, 17, 17);
-$white1: rgb(243, 243, 243);
+$font1: Allura, sans-serif;
+$font2: Poppins, sans-serif;
+$font3: Roboto, sans-serif;
+
+$white1: #eeeeee;
+$black1: rgb(15, 15, 15);
+$black2: #21201e;
 $grey1: rgb(233, 233, 233);
-$grey2: rgb(209, 209, 209);
+$grey2: rgb(202, 202, 202);
 $grey3: rgb(105, 105, 105);
-
-@mixin title {
-  text-transform: uppercase;
-  font-family: $font1;
-  letter-spacing: 2px;
-}
+$grey4: #21201e;
+$copper1: rgb(163, 112, 68);
+$copper2: rgba(233, 179, 131, 0.123);
 
 * {
   margin: 0;
@@ -29,74 +33,96 @@ $grey3: rgb(105, 105, 105);
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-li {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
   color: $white1;
 }
 
-textarea {
-  resize: none;
-  background: transparent;
-  border: 1px solid $grey2;
-  border-radius: 2px;
-  &:focus {
-    outline: 1px solid $grey3;
-  }
-}
-input {
-  background: transparent;
-  border: 1px solid $grey2;
-  border-radius: 2px;
-  &:focus {
-    outline: 1px solid $grey3;
-  }
-}
-
 body {
-  background: url(../img/bg.jpg) fixed center/cover;
   text-align: center;
-  font-family: $font2;
-  // max-width: 1300px;
-  // width: 80%;
   margin: 0 auto;
   overflow-x: hidden;
+  background: $grey4;
+}
 
-  &:before {
-    content: "";
-    background: black;
+a::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection,
+// img::selection,
+span::selection,
+strong::selection,
+ul::selection,
+li::selection,
+div::selection,
+button::selection,
+input::selection,
+option::selection,
+select::selection {
+  background: $grey2;
+}
+
+img,
+br {
+  user-select: none
+}
+
+
+
+
+h2 {
+  font-family: $font1;
+  color: $copper1;
+}
+
+h1,
+h3,
+h6,
+.phone-number {
+  font-family: $font2;
+  text-transform: uppercase;
+}
+
+
+
+#people,
+#booking-day,
+#booking-time {
+  cursor: pointer;
+}
+
+input {
+  position: relative;
+  border: none;
+  //   border-bottom: solid 2px $grey1;
+  //   border-spacing: 10px;
+
+
+  &:focus {
+    outline: none;
+  }
+
+  &::after {
+    content: "Bonjour";
     position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 0;
+    width: 50px;
+    height: 2px;
+    bottom: 1px;
     left: 0;
-    animation: 1.5s animBefore ease forwards;
-    animation-delay: 0.15s;
+    color: $grey1;
+  }
+}
 
-    @keyframes animBefore {
-      to {
-        opacity: 0;
-      }
-    }
-  }
+.price {
+  color: $copper1;
+  font-family: $font3;
+  font-weight: 600;
+}
 
-  .button {
-    @include title;
-    color: $black1;
-    border: 2px solid $black1;
-    padding: 15px 35px;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: 0.3s;
-  }
-  .button:hover {
-    box-shadow: 0 0px 5px 0 $black1;
-  }
+li {
+  list-style: none;
 }
