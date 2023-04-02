@@ -7,6 +7,7 @@ footer {
 
         @media screen and (max-width: 900px) {
             background: $black2;
+            // grid-template-columns: 15% 85%;
         }
 
 
@@ -14,9 +15,6 @@ footer {
             margin: 80px;
             text-align: left;
 
-            @media screen and (max-width: 900px) {
-                display: none;
-            }
 
             @media screen and (max-width: 1440px) {
                 margin: 80px 80px 80px 60px;
@@ -32,6 +30,10 @@ footer {
 
             @media screen and (max-width: 1210px) {
                 margin: 80px 80px 80px -30px;
+            }
+
+            @media screen and (max-width: 900px) {
+                display: none;
             }
 
             h2 {
@@ -59,7 +61,7 @@ footer {
 
             @media screen and (max-width: 900px) {
                 width: 100%;
-                margin: 86px 0 80px 0px;
+                margin: 86px auto;
             }
 
             h6 {
@@ -75,6 +77,8 @@ footer {
                 gap: 10px;
 
 
+
+
                 input {
                     background: transparent;
                     border: $copper2 1px solid;
@@ -86,8 +90,12 @@ footer {
                     padding-left: 10px;
 
                     @media screen and (max-width: 500px) {
-                        width: 290px;
+                        width: 180%;
                     }
+
+                    // @media screen and (max-width: 500px) {
+                    //     width: 290px;
+                    // }
                 }
 
                 button {
@@ -120,6 +128,11 @@ footer {
                 // width: 60%;
                 padding-top: 10px;
 
+                @media screen and (max-width: 400px) {
+                    gap: 20px;
+                }
+
+
                 ul {
                     display: flex;
                     flex-direction: row;
@@ -131,13 +144,26 @@ footer {
                     }
 
                     @media screen and (max-width: 500px) {
-                        width: 150px;
+                        width: 130px;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: 100px;
+                    }
+
+                    @media screen and (max-width: 350px) {
+                        width: 80px;
                     }
 
 
                     i {
                         color: $grey3;
                         transition: 0.15s ease-in-out;
+
+                        @media screen and (max-width: 350px) {
+                            font-size: 0.9em;
+                        }
+
 
                         &:hover {
                             color: $grey2;

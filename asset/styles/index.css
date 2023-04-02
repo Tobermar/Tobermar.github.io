@@ -10,6 +10,10 @@
   font-family: "Roboto";
   src: url(../font//Roboto-Light.ttf);
 }
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +90,7 @@ input:focus {
   outline: none;
 }
 input::after {
-  content: "Bonjour";
+  content: "";
   position: absolute;
   width: 50px;
   height: 2px;
@@ -359,6 +363,9 @@ main .section1 .s1-right-container img {
 main .section2 {
   position: relative;
 }
+main .section2 #menu {
+  padding-top: 1px;
+}
 main .section2 h2 {
   font-size: 2.5em;
   font-weight: 500;
@@ -609,6 +616,11 @@ main .booking .booking-left-container .border .day h3 {
     font-size: 1.4em;
   }
 }
+@media screen and (max-width: 460px) {
+  main .booking .booking-left-container .border .day h3 {
+    font-size: 1.1em;
+  }
+}
 main .booking .booking-left-container .border p {
   color: #eeeeee;
   font-family: Roboto, sans-serif;
@@ -626,6 +638,11 @@ main .booking .booking-left-container .border p {
 @media screen and (max-width: 1000px) {
   main .booking .booking-left-container .border p {
     font-size: 1em;
+  }
+}
+@media screen and (max-width: 460px) {
+  main .booking .booking-left-container .border p {
+    font-size: 0.8em;
   }
 }
 main .booking .booking-left-container .phone-number {
@@ -647,6 +664,11 @@ main .booking .booking-left-container .phone-number {
 @media screen and (max-width: 1000px) {
   main .booking .booking-left-container .phone-number {
     font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 460px) {
+  main .booking .booking-left-container .phone-number {
+    font-size: 1.2em;
   }
 }
 main .booking .booking-right-container {
@@ -799,7 +821,14 @@ main .booking .booking-right-container form button:hover {
 }
 @media screen and (max-width: 600px) {
   main .booking .booking-right-container form button {
-    margin: 50px auto 50px;
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .booking .booking-right-container form button {
+    font-size: 0.9em;
+    font-weight: 600;
   }
 }
 main .section-event {
@@ -1071,11 +1100,6 @@ footer .footer-container > div:first-child {
   margin: 80px;
   text-align: left;
 }
-@media screen and (max-width: 900px) {
-  footer .footer-container > div:first-child {
-    display: none;
-  }
-}
 @media screen and (max-width: 1440px) {
   footer .footer-container > div:first-child {
     margin: 80px 80px 80px 60px;
@@ -1094,6 +1118,11 @@ footer .footer-container > div:first-child {
 @media screen and (max-width: 1210px) {
   footer .footer-container > div:first-child {
     margin: 80px 80px 80px -30px;
+  }
+}
+@media screen and (max-width: 900px) {
+  footer .footer-container > div:first-child {
+    display: none;
   }
 }
 footer .footer-container > div:first-child h2 {
@@ -1119,7 +1148,7 @@ footer .footer-container > div:last-child {
 @media screen and (max-width: 900px) {
   footer .footer-container > div:last-child {
     width: 100%;
-    margin: 86px 0 80px 0px;
+    margin: 86px auto;
   }
 }
 footer .footer-container > div:last-child h6 {
@@ -1145,7 +1174,7 @@ footer .footer-container > div:last-child form input {
 }
 @media screen and (max-width: 500px) {
   footer .footer-container > div:last-child form input {
-    width: 290px;
+    width: 180%;
   }
 }
 footer .footer-container > div:last-child form button {
@@ -1171,6 +1200,11 @@ footer .footer-container > div:last-child .social-media {
   gap: 40px;
   padding-top: 10px;
 }
+@media screen and (max-width: 400px) {
+  footer .footer-container > div:last-child .social-media {
+    gap: 20px;
+  }
+}
 footer .footer-container > div:last-child .social-media ul {
   display: flex;
   flex-direction: row;
@@ -1184,12 +1218,27 @@ footer .footer-container > div:last-child .social-media ul {
 }
 @media screen and (max-width: 500px) {
   footer .footer-container > div:last-child .social-media ul {
-    width: 150px;
+    width: 130px;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .footer-container > div:last-child .social-media ul {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 350px) {
+  footer .footer-container > div:last-child .social-media ul {
+    width: 80px;
   }
 }
 footer .footer-container > div:last-child .social-media ul i {
   color: rgb(105, 105, 105);
   transition: 0.15s ease-in-out;
+}
+@media screen and (max-width: 350px) {
+  footer .footer-container > div:last-child .social-media ul i {
+    font-size: 0.9em;
+  }
 }
 footer .footer-container > div:last-child .social-media ul i:hover {
   color: rgb(202, 202, 202);

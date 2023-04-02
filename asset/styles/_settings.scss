@@ -13,6 +13,10 @@
   src: url(../font//Roboto-Light.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 $font1: Allura, sans-serif;
 $font2: Poppins, sans-serif;
 $font3: Roboto, sans-serif;
@@ -107,7 +111,7 @@ input {
   }
 
   &::after {
-    content: "Bonjour";
+    content: "";
     position: absolute;
     width: 50px;
     height: 2px;
